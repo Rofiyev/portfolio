@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { PortfolioCard } from "../../Style/PortfolioCard";
-import { portfolioData } from "../../Data";
+import { buttonGroup, portfolioData } from "../../Data";
 import { useState } from "react";
 import { Zoom } from "react-awesome-reveal";
 
@@ -55,30 +55,15 @@ export default function Portfolio() {
         flexDirection={"column"}
       >
         <ButtonGroup variant="outlined" aria-label="outlined button group">
-          <Button
-            sx={{ textTransform: "capitalize" }}
-            onClick={() => filterFunc(portfolioData, "all")}
-          >
-            All
-          </Button>
-          <Button
-            sx={{ textTransform: "capitalize" }}
-            onClick={() => filterFunc(portfolioData, "htmlCss")}
-          >
-            Html & Css
-          </Button>
-          <Button
-            sx={{ textTransform: "capitalize" }}
-            onClick={() => filterFunc(portfolioData, "javascript")}
-          >
-            JavaScript
-          </Button>
-          <Button
-            sx={{ textTransform: "capitalize" }}
-            onClick={() => filterFunc(portfolioData, "react")}
-          >
-            ReactJS
-          </Button>
+          {buttonGroup.map((item, i) => (
+            <Button
+              key={i}
+              sx={{ textTransform: "capitalize" }}
+              onClick={() => filterFunc(portfolioData, item.data)}
+            >
+              {item.text}
+            </Button>
+          ))}
         </ButtonGroup>
 
         <Grid mt={2} container spacing={2}>

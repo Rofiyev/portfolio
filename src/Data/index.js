@@ -187,6 +187,25 @@ export const ResumeData = [
   },
 ];
 
+export const buttonGroup = [
+  {
+    text: "All",
+    data: "all",
+  },
+  {
+    text: "Html & Css",
+    data: "htmlCss",
+  },
+  {
+    text: "JavaScript",
+    data: "javascript",
+  },
+  {
+    text: "React JS",
+    data: "react",
+  },
+];
+
 export const portfolioData = [
   {
     id: 1,
