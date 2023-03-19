@@ -19,6 +19,7 @@ import {
 export default function App() {
   const theme = useTheme();
   const responsive = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <>
       <CssBaseline />
@@ -40,13 +41,7 @@ export default function App() {
         }}
       />
       <Box display={"flex"}>
-        {responsive ? (
-          <DrawerMenu>
-            <Header />
-          </DrawerMenu>
-        ) : (
-          <Header />
-        )}
+        {responsive ? <DrawerMenu /> : <Header width={23} />}
         <Box
           height={"100vh"}
           sx={{

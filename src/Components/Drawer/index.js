@@ -1,13 +1,19 @@
 import { Drawer, IconButton } from "@mui/material";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import Header from "../Header/Header";
 
-export default function DrawerMenu({ children }) {
+export default function DrawerMenu() {
   const [openDrawer, setOpenDrawer] = useState(false);
+
   return (
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        {children}
+        <Header
+          width={50}
+          setOpenDrawer={setOpenDrawer}
+          openDrawer={openDrawer}
+        />
       </Drawer>
       <IconButton
         sx={{

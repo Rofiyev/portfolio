@@ -20,12 +20,16 @@ const socials = [
   <FaLinkedinIn color="white" />,
 ];
 
-const Header = () => {
+const Header = ({ width, setOpenDrawer, openDrawer }) => {
   const [isActive, setActive] = useState("Home");
 
   const scroll = (item) => {
     const section = document.querySelector(`#${item}`);
     section.scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => {
+      setOpenDrawer(!openDrawer);
+    }, 1000);
   };
 
   return (
@@ -36,7 +40,7 @@ const Header = () => {
       justifyContent={"space-between"}
       py={2}
       sx={{
-        width: { xs: "35vw", md: "23vw" },
+        width: { xs: `${width + 20}%`, sm: `${width}%` },
         background: "#040b14",
         position: "fixed",
         top: "0",
