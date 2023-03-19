@@ -137,7 +137,7 @@ export const progressBarData = [
   },
   {
     title: "React JS",
-    number: "50%",
+    number: "80%",
   },
 ];
 
