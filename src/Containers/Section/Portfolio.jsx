@@ -103,7 +103,7 @@ export default function Portfolio() {
                         cursor: "pointer",
                         color: "#fff",
                         fontWeight: "bold",
-                        textDecoration: "underline",
+                        textDecoration: "none",
                       }}
                       component={"a"}
                       variant="a"

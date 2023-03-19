@@ -3,6 +3,7 @@ export const PortfolioCard = styled("Box")({
   position: "relative",
   overflow: "hidden",
   transition: "0.8s ease-in-out",
+
   ":hover .image": {
     filter: "brightness(0.4)  blur(1.5px) blur(1.5px)",
   },
