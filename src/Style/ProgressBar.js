@@ -1,4 +1,3 @@
-import { blue } from "@mui/material/colors";
 import { styled } from "@mui/system";
 export const ProgressWrapper = styled("Box")({
   display: "flex",

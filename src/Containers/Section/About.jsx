@@ -1,15 +1,14 @@
-import { Avatar, Box, Button, Typography } from "@mui/material";
+import { Avatar, Box, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Bounce, Fade, Slide } from "react-awesome-reveal";
 import person from "../../Image/person.jpg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { aboutData, factsData, progressBarData } from "../../Data";
 import { ProgressWrapper } from "../../Style/ProgressBar";
-import { useState } from "react";
 
 export default function About() {
   return (
-    <Box id="about" pl={5} py={5} pr={2}>
+    <Box id="about" py={5} sx={{ pl: { xs: 1, md: 5 }, pr: { xs: 1, md: 1 } }}>
       <Typography
         sx={{ fontWeight: "bold", color: "#173b6c", overflowX: "hidden" }}
         component={"h2"}
@@ -51,9 +50,22 @@ export default function About() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incidit labore et dolore magna aliqua.
             </Typography>
-            <Grid my={2} container justifyContent={"center"} rowSpacing={1}>
+            <Grid
+              my={2}
+              container
+              justifyContent={"center"}
+              rowSpacing={1}
+              flexWrap={"wrap"}
+            >
               {aboutData.map((item, i) => (
-                <Grid item xs={6} display={"flex"} alignItems={"center"}>
+                <Grid
+                  key={i}
+                  item
+                  xs={12}
+                  md={6}
+                  display={"flex"}
+                  alignItems={"center"}
+                >
                   <ChevronRightIcon
                     sx={{ color: "#149ddd", fontSize: "28px" }}
                   />
@@ -96,7 +108,15 @@ export default function About() {
 
         <Grid container justifyContent={"center"} spacing={6}>
           {factsData.map((item, index) => (
-            <Grid key={index} item display={"flex"} xs={3} gap={"10px"}>
+            <Grid
+              key={index}
+              item
+              display={"flex"}
+              xs={12}
+              sm={6}
+              md={3}
+              gap={"10px"}
+            >
               <Bounce duration={1000} triggerOnce>
                 {item.icon}
                 <Box>

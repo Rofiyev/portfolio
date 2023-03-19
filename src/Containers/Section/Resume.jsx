@@ -4,7 +4,11 @@ import { ResumeData } from "../../Data";
 
 export default function Resume() {
   return (
-    <Box id="resume" pl={5} py={10} pr={2}>
+    <Box
+      id="resume"
+      py={10}
+      sx={{ pl: { xs: 1, md: 5 }, pr: { xs: 1, md: 1 } }}
+    >
       <Typography
         sx={{ fontWeight: "bold", color: "#173b6c", overflowX: "hidden" }}
         component={"h2"}
@@ -20,9 +24,7 @@ export default function Resume() {
         sit in iste officiis commodi quidem hic quas.
       </Typography>
       <Grid container>
-        {ResumeData.map(
-          (item, index) => ResumeContent(item, index)
-        )}
+        {ResumeData.map((item, index) => ResumeContent(item, index))}
       </Grid>
     </Box>
   );

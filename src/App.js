@@ -1,11 +1,26 @@
-import { Box, CssBaseline, GlobalStyles } from "@mui/material";
+import {
+  Box,
+  CssBaseline,
+  GlobalStyles,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { Header } from "./Components";
-import { About, Contact, Home, Portfolio, Resume, Services } from "./Containers";
-import NavbarContext from "./Context/NavbarContext";
+import DrawerMenu from "./Components/Drawer";
+import {
+  About,
+  Contact,
+  Home,
+  Portfolio,
+  Resume,
+  Services,
+} from "./Containers";
 
 export default function App() {
+  const theme = useTheme();
+  const responsive = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <NavbarContext.Provider>
+    <>
       <CssBaseline />
       <GlobalStyles
         styles={{
@@ -25,10 +40,21 @@ export default function App() {
         }}
       />
       <Box display={"flex"}>
-        <Header />
+        {responsive ? (
+          <DrawerMenu>
+            <Header />
+          </DrawerMenu>
+        ) : (
+          <Header />
+        )}
         <Box
           height={"100vh"}
-          sx={{ width: { xs: '100vw', md: '77vw' }, position: "absolute", right: "0", top: "0" }}
+          sx={{
+            width: { xs: "100vw", md: "77vw" },
+            position: "absolute",
+            right: "0",
+            top: "0",
+          }}
         >
           <Home />
           <About />
@@ -38,6 +64,6 @@ export default function App() {
           <Contact />
         </Box>
       </Box>
-    </NavbarContext.Provider>
+    </>
   );
 }

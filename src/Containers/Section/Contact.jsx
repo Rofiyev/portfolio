@@ -5,7 +5,11 @@ import { Slide } from "react-awesome-reveal";
 
 export default function Contact() {
   return (
-    <Box id="contact" pl={5} py={10} pr={2} sx={{ overflowX: "hidden" }}>
+    <Box
+      id="contact"
+      py={10}
+      sx={{ pl: { xs: 1, md: 5 }, pr: { xs: 1, md: 1 }, overflowX: "hidden" }}
+    >
       <Typography
         sx={{ fontWeight: "bold", color: "#173b6c", overflowX: "hidden" }}
         component={"h2"}
@@ -59,7 +63,9 @@ export default function Contact() {
                     </Box>
                   </Box>
                 ))}
-                <iframe
+                <Box
+                  component={"iframe"}
+                  variant="iframe"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13012.083221601926!2d66.96169783485037!3d39.65095331412609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d191960077df7%3A0x487636d9d13f2f57!2sSamarqand%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1676560611159!5m2!1suz!2s"
                   width={"100%"}
                   height={"250"}
@@ -67,7 +73,7 @@ export default function Contact() {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                ></Box>
               </Box>
             </Slide>
           </Grid>

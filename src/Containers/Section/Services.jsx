@@ -12,7 +12,11 @@ import { SwipperWrapper } from "../../Style/SwipperWrapper";
 
 export default function Services() {
   return (
-    <Box id="services" pl={5} py={10} pr={2} sx={{ overflowX: "hidden" }}>
+    <Box
+      id="services"
+      py={10}
+      sx={{ pl: { xs: 1, md: 5 }, pr: { xs: 1, md: 1 }, overflowX: "hidden" }}
+    >
       <Box mt={10}>
         <Typography
           sx={{ fontWeight: "bold", color: "#173b6c", overflowX: "hidden" }}

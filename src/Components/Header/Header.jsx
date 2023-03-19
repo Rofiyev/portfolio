@@ -10,8 +10,7 @@ import {
 import { navbarData } from "../../Data";
 import { MenuList } from "../../Style/MenuItem";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
-import { useContext, useState } from "react";
-import NavbarContext from "../../Context/NavbarContext";
+import { useState } from "react";
 
 const socials = [
   <FaTwitter color="white" />,
@@ -23,7 +22,6 @@ const socials = [
 
 const Header = () => {
   const [isActive, setActive] = useState("Home");
-  // const { isOpen, setIsOpen } = useContext(NavbarContext);
 
   const scroll = (item) => {
     const section = document.querySelector(`#${item}`);
@@ -120,7 +118,6 @@ const Header = () => {
               onClick={() => {
                 scroll(item.text.toLowerCase());
                 setActive(item.text);
-                // setIsOpen(true);
               }}
               key={index}
             >

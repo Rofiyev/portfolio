@@ -161,17 +161,6 @@ export const ResumeData = [
     lists: [],
   },
   {
-    order: 5,
-    heading: "",
-    title: " BACHELOR OF FINE ARTS & GRAPHIC DESIGN",
-    margin: -120,
-    date: "2015 - 2016",
-    location: "Rochester Institute of Technology, Rochester, NY",
-    description:
-      "Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend",
-    lists: [],
-  },
-  {
     order: 2,
     heading: "Professional Experience",
     title: "SENIOR GRAPHIC DESIGN SPECIALIST",

@@ -28,7 +28,11 @@ export default function Portfolio() {
   };
 
   return (
-    <Box id="portfolio" pl={5} pt={10} pr={2}>
+    <Box
+      id="portfolio"
+      pt={10}
+      sx={{ pl: { xs: 1, md: 5 }, pr: { xs: 1, md: 1 } }}
+    >
       <Typography
         sx={{ fontWeight: "bold", color: "#173b6c", overflowX: "hidden" }}
         component={"h2"}
@@ -51,21 +55,35 @@ export default function Portfolio() {
         flexDirection={"column"}
       >
         <ButtonGroup variant="outlined" aria-label="outlined button group">
-          <Button onClick={() => filterFunc(portfolioData, "all")}>All</Button>
-          <Button onClick={() => filterFunc(portfolioData, "htmlCss")}>
-            HTML & CSS
+          <Button
+            sx={{ textTransform: "capitalize" }}
+            onClick={() => filterFunc(portfolioData, "all")}
+          >
+            All
           </Button>
-          <Button onClick={() => filterFunc(portfolioData, "javascript")}>
+          <Button
+            sx={{ textTransform: "capitalize" }}
+            onClick={() => filterFunc(portfolioData, "htmlCss")}
+          >
+            Html & Css
+          </Button>
+          <Button
+            sx={{ textTransform: "capitalize" }}
+            onClick={() => filterFunc(portfolioData, "javascript")}
+          >
             JavaScript
           </Button>
-          <Button onClick={() => filterFunc(portfolioData, "react")}>
+          <Button
+            sx={{ textTransform: "capitalize" }}
+            onClick={() => filterFunc(portfolioData, "react")}
+          >
             ReactJS
           </Button>
         </ButtonGroup>
 
         <Grid mt={2} container spacing={2}>
           {arr.map((item) => (
-            <Grid key={item.id} item xs={12} sm={8} md={4} lg={4}>
+            <Grid key={item.id} item xs={12} sm={6} md={4} lg={4}>
               <Zoom triggerOnce>
                 <PortfolioCard>
                   <Avatar
@@ -83,7 +101,6 @@ export default function Portfolio() {
                     <Typography
                       sx={{
                         cursor: "pointer",
-                        textDecoration: "none",
                         color: "#fff",
                         fontWeight: "bold",
                         textDecoration: "underline",

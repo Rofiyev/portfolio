@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Box, Button, Container, IconButton, Typography } from "@mui/material";
 import backgrounImage from "../../Image/oboi.jpg";
 import Typed from "typed.js";
@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import { FaArrowUp, FaBars } from "react-icons/fa";
 import { ButtonWrapper } from "../../Style/toTopButtonStyle";
-import NavbarContext from "../../Context/NavbarContext";
 
 export default function Home() {
   const el = useRef(null);
@@ -45,21 +44,19 @@ export default function Home() {
   };
 
   window.addEventListener("scroll", toggleVisible);
-
-  // const { isOpen, setIsOpen } = useContext(NavbarContext);
-  // console.log(isOpen);
-
   return (
     <Box
       id="home"
       height={"100%"}
       width={"100%"}
       sx={{
-        background: `linear-gradient(to top, rgba(5, 13, 24, 0.4), rgba(5, 13, 24, 0.4)), url(${backgrounImage}) center center`,
+        background: `linear-gradient(to top, rgba(5, 13, 24, 0.4), rgba(5, 13, 24, 0.4)), url(${backgrounImage})`,
         backgroundSize: "cover",
+        backgroundPosition: "100%",
         backgroundAttachment: "fixed",
         position: "relative",
         overflowX: "hidden",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <IconButton
@@ -71,7 +68,6 @@ export default function Home() {
           zIndex: 100,
           color: "#149ddd",
         }}
-        // onClick={() => setIsOpen(!isOpen)}
       >
         <FaBars />
       </IconButton>
@@ -91,7 +87,7 @@ export default function Home() {
             position: "absolute",
             top: "50%",
             transform: "translateY(-50%)",
-            marginLeft: "3%",
+            marginLeft: { xs: "0%", md: "3%" },
           }}
         >
           <Typography
@@ -100,6 +96,7 @@ export default function Home() {
               cursor: "pointer",
               letterSpacing: "1px",
               fontFamily: "Poppins, sans-serif",
+              fontSize: { xs: "35px", md: "45px" },
             }}
             color={"white"}
             component={"h1"}
