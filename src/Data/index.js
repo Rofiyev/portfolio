@@ -61,7 +61,7 @@ export const aboutData = [
   },
   {
     text: "Age",
-    value: "17",
+    value: "18",
   },
   {
     text: "Website",
@@ -73,10 +73,10 @@ export const aboutData = [
   },
   {
     text: "Phone",
-    value: "+998 77 707 77 77",
+    value: "+998 99 448 57 13",
   },
   {
-    text: "PhEmailone",
+    text: "Email",
     value: "rof1yev@gmail.com",
   },
   {

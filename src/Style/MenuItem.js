@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-export const MenuList = styled("Box")({
+export const MenuList = styled("li")({
   display: "flex",
   alignItems: "flex-end",
   cursor: "pointer",

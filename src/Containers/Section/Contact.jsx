@@ -85,7 +85,12 @@ export default function Contact() {
                 sx={{ boxShadow: "0 0 24px 0 rgb(0 0 0 / 12%)" }}
                 textAlign={"center"}
               >
-                <Box display={"flex"} width={"100%"} gap={"15px"}>
+                <Box
+                  display={"flex"}
+                  width={"100%"}
+                  gap={"15px"}
+                  sx={{ flexDirection: { xs: "column", sm: "row" } }}
+                >
                   <TextField
                     sx={{ width: "100%" }}
                     id="demo-helper-text-aligned-no-helper"
@@ -104,7 +109,7 @@ export default function Contact() {
                   label="Subject"
                 />
                 <TextField fullWidth label="Messege" multiline rows={6} />
-                <Button sx={{ mt: 3, mb: 11.9 }} variant="contained">
+                <Button sx={{ mt: 2 }} variant="contained">
                   Send Messege
                 </Button>
               </Box>
